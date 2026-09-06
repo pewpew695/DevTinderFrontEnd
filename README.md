@@ -14,10 +14,17 @@
 - Install axios (Used to make API calls instead of using fetch)
 - In backend code, install cors & use as a middleware in the app with configurations: origins, credentials:true
 - Whenever an API call is being done with axios pass =>{withCredentials:true}
-
+- Install redux toolkit & react-redux
+- Configure store, add Provider to applocation, create a slice, add slice to store
+- From login page dispatch an action using useDispatch hook to add user to the store
+- In NavBar, the photo should be displayed only if user is logged in. To access the user, subscribe to the store using useSelector Hook
+- When user logged in , navigate to feed page using useNavigate hook
+- Refactor the code: 
+    1)In login move the base URL to a constant
+    2)Move all component files into a new component oflder & change all references of import of these files
 Outline of WebPage:
 \_Body
-\_NavBar
+\_NavBars
 **Route=/ =>Feed
 **Route=/login =>Login
 **Route=/connections =>Connections
