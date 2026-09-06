@@ -19,9 +19,14 @@
 - From login page dispatch an action using useDispatch hook to add user to the store
 - In NavBar, the photo should be displayed only if user is logged in. To access the user, subscribe to the store using useSelector Hook
 - When user logged in , navigate to feed page using useNavigate hook
-- Refactor the code: 
-    1)In login move the base URL to a constant
-    2)Move all component files into a new component oflder & change all references of import of these files
+- Refactor the code:
+  1)In login move the base URL to a constant
+  2)Move all component files into a new component oflder & change all references of import of these files
+- You should not be able to access other routes without login
+- If token is not present, redirect to login page
+- In Navbar, give links from Profile in dropdown & Website name to rediret to profile page/Home page respectively
+- Do not allow to make API call for accessing profile data if already present in Redux store.
+
 Outline of WebPage:
 \_Body
 \_NavBars
