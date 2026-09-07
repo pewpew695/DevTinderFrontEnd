@@ -26,6 +26,8 @@
 - If token is not present, redirect to login page
 - In Navbar, give links from Profile in dropdown & Website name to rediret to profile page/Home page respectively
 - Do not allow to make API call for accessing profile data if already present in Redux store.
+- On logout click, call logout API & navigate to login page
+- Creat a dynamic error message on login & display inside login window
 
 Outline of WebPage:
 \_Body
