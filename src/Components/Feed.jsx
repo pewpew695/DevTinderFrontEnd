@@ -17,7 +17,6 @@ const Feed = () => {
         withCredentials: true,
       });
       dispatch(addFeed(res.data));
-      
     } catch (err) {
       console.error(err);
     }
@@ -26,7 +25,7 @@ const Feed = () => {
     getFeed();
   }, []);
   return (
-    feed && (
+    feed?.length > 0 && (
       <div className="flex justify-center my-4">
         <UserCard user={feed[0]} />
       </div>

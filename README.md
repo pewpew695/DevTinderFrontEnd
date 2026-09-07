@@ -30,6 +30,10 @@
 - Creat a dynamic error message on login & display inside login window
 - Create a feedSlice to store & remove the feed data in the redux store
 - Build the userCard on the feed page
+- Convert patch method to put method to avoid CORS issues
+- Gave preview of the current user's card in the Profile
+- On save profile click, make a put request to API to save profile data in db, update the store & also give a Toast notification of success with a timeout of 3 seconds
+- Make the error message in Profile window dynamic
 
 Outline of WebPage:
 \_Body

@@ -12,7 +12,9 @@ const UserCard = ({ user }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{firstName + " " + lastName}</h2>
-          <p>{age + ",   " + gender[0].toUpperCase() + gender.slice(1)}</p>
+          {age && gender && (
+            <p>{age + ", " + gender[0].toUpperCase() + gender.slice(1)}</p>
+          )}
           <p>{description}</p>
           <p>{"Skilled at " + skills}</p>
           <div className="card-actions justify-end my-2">
