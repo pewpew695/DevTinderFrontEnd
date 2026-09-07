@@ -22,7 +22,7 @@ const Login = () => {
         },
         { withCredentials: true },
       );
-      console.log("error:" + res);
+      // console.log("error:" + res);
       dispatch(addUser(res.data));
       navigate("/");
     } catch (err) {

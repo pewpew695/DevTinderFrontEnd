@@ -28,6 +28,8 @@
 - Do not allow to make API call for accessing profile data if already present in Redux store.
 - On logout click, call logout API & navigate to login page
 - Creat a dynamic error message on login & display inside login window
+- Create a feedSlice to store & remove the feed data in the redux store
+- Build the userCard on the feed page
 
 Outline of WebPage:
 \_Body
