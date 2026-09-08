@@ -37,7 +37,7 @@
 - Create a new Page called Connections to make an API call to /user/connections & store the data in connectionSlice. then display all the userCards of the connections of current user on this page
 - Create a new Page called Requests to make an API call to /user/requests/received & store the data in requestSlice. then display all the userCards of the requests received by current user on this page
 - In request page, on accept or reject button click, call api to review request & once done to re-update store. This will casuse the usercasrd to immediately go from the page
-
+- In feed page enabled feature to send interested or ignored status for the cards beng displayed. On button click feed would be refreshed with the next value from the store by constantly updating the store
 
 Outline of WebPage:
 \_Body
