@@ -34,6 +34,8 @@
 - Gave preview of the current user's card in the Profile
 - On save profile click, make a put request to API to save profile data in db, update the store & also give a Toast notification of success with a timeout of 3 seconds
 - Make the error message in Profile window dynamic
+- Create a new Page called Connections to make an API call to /user/connections & store the data in connectionSlice. then display all the userCards of the connections of current user on this page
+- Create a new Page called Requests to make an API call to /user/requests/received & store the data in requestSlice. then display all the userCards of the requests received by current user on this page
 
 Outline of WebPage:
 \_Body
