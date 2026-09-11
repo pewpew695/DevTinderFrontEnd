@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { BASE_URL } from "../Utils/Constants";
+import { BASE_URL, DEFAULT_PHOTO_URL } from "../Utils/Constants";
 import { useDispatch } from "react-redux";
 import { removeUserFromFeed } from "../Utils/feedSlice";
 const UserCard = ({ user }) => {
@@ -32,7 +32,11 @@ const UserCard = ({ user }) => {
     <div>
       <div className="card bg-base-300 w-96 shadow-sm">
         <figure className="my-2">
-          <img src={photoURL} alt="User Photo" className="rounded-full" />
+          <img
+            src={photoURL ? photoURL : DEFAULT_PHOTO_URL}
+            alt="User Photo"
+            className="rounded-full h-50 - w-50"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{firstName + " " + lastName}</h2>

@@ -1,8 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { BASE_URL } from "../Utils/Constants";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { BASE_URL, DEFAULT_PHOTO_URL } from "../Utils/Constants";
 import { removeUser } from "../Utils/userSlice";
 import { removeFeed } from "../Utils/feedSlice";
 
@@ -10,6 +10,7 @@ const NavBar = () => {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
   const handleLogout = async () => {
     try {
       console.log("test");
@@ -24,9 +25,13 @@ const NavBar = () => {
   return (
     <div className="navbar bg-base-300 shadow-sm">
       <div className="flex-1">
-        <Link to="/" className="btn btn-ghost text-xl">
-          DevTinder
-        </Link>
+        {location.pathname == "/login" ? (
+          <span className="btn btn-ghost text-xl">DevTinder</span>
+        ) : (
+          <Link to="/" className="btn btn-ghost text-xl">
+            DevTinder
+          </Link>
+        )}
       </div>
       {user && <div className="items-center">Hello, {user.firstName}</div>}
       {user && (
@@ -38,7 +43,10 @@ const NavBar = () => {
               className="btn btn-ghost btn-circle avatar"
             >
               <div className="w-10 rounded-full">
-                <img alt="UserPhoto" src={user.photoURL} />
+                <img
+                  alt="UserPhoto"
+                  src={user.photoURL ? user.photoURL : DEFAULT_PHOTO_URL}
+                />
               </div>
             </div>
             <ul
